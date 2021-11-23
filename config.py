@@ -1,8 +1,16 @@
-from os import getenv
+import os
+import aiohttp
 
+from os import getenv
 from dotenv import load_dotenv
+from helpers.uptools import f
+
+if os.path.exists("local.env"):
+    load_dotenv("local.env")
 
 load_dotenv()
+que = {}
+admins = {}
 
 SESSION_NAME = getenv("SESSION_NAME", "session")
 BOT_TOKEN = getenv("BOT_TOKEN")
