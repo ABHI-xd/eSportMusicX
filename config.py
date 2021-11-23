@@ -3,7 +3,7 @@ import aiohttp
 
 from os import getenv
 from dotenv import load_dotenv
-from helpers.uptools import f
+
 
 if os.path.exists("local.env"):
     load_dotenv("local.env")
